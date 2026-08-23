@@ -1,0 +1,34 @@
+wage = 0
+pay = 0
+salary = 0
+
+def salary(hours, wage):
+    if hours<= 40:
+        return hours * wage
+    return 40 * wage + (hours - 40) * wage * 1.5
+wage * 1.5
+
+def status(salary):
+    if salary >= 20000:
+        return "high Income"
+    elif salary >= 10000:
+        return "Average Income"
+    return "low Income"
+
+
+name = input("Name: ")
+hours = float(input("hours: "))
+wage = float(input("Wage: "))
+
+if hours < 0 or hours > 80:
+    print("Invalid hours")
+elif wage <= 0:
+    print("Invalid wage")
+else:
+    pay = salary(hours, wage)
+
+    print("Name: ", name)
+    print("Hours worked: ", hours)
+    print("Hourly wage: ", wage)
+    print("Gross salary: ", pay)
+    print("Status: ", status(pay))
